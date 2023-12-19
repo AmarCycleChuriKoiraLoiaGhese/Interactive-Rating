@@ -1,0 +1,245 @@
+:root
+{
+    /* Colors */
+    --orange: hsl(25, 97%, 53%);
+    --white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+    --slightly-darker-blue: hsl(215, 22%, 15%);
+
+    /* Font Sizes */
+    --fs-p: 0.938rem;
+
+    /* Transition time */
+    --tran-time: 0.2s;
+}
+
+/* Link to fonts */
+
+@font-face 
+{
+  font-family: Overpass-Reg;
+  src: url('fonts/Overpass/static/Overpass-Regular.ttf');
+}
+
+@font-face 
+{
+  font-family: Overpass-Bold;
+  src: url('fonts/Overpass/static/Overpass-Bold.ttf');
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body 
+{
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: var(--very-dark-blue);
+  display: flex;
+  overflow: hidden;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+main
+{
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--slightly-darker-blue);
+  margin: auto;
+  width: 28rem;
+  border-radius: 25px;
+  padding: 2rem;
+}
+
+.star-container
+{
+  background-color: var(--dark-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.star-container > svg
+{
+  margin: auto;
+}
+
+main > h1
+{
+  font-family: Overpass-Bold;
+  color: var(--white);
+}
+
+main > p
+{
+  font-family: Overpass-Reg;
+  font-size: var(--fs-p);
+  color: var(--medium-grey);
+}
+
+.rating-container
+{
+  margin-top: 25px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rating-container > span
+{
+  border-radius: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  display: inherit;
+  cursor: pointer;
+  transition: all var(--tran-time);
+}
+
+.rating-container > span:hover
+{
+  background-color: var(--orange);
+}
+
+.defaultBackground
+{
+  background-color: var(--dark-blue);
+}
+
+.defaultBackground > label
+{
+  color: var(--light-grey);
+}
+
+.highlight
+{
+  background-color: var(--light-grey);
+}
+
+.highlight > label,
+.rating-container > span:hover label
+{
+  color: var(--white);
+  font-size: larger;
+}
+
+.rating-container label
+{
+  font-family: Overpass-Bold;
+  font-size: var(--fs-p);
+  align-self: center;
+  margin: auto;
+  transition: all var(--tran-time);
+}
+
+main > a
+{
+  background-color: var(--orange);
+  border: none;
+  height: 2.5rem;
+  border-radius: 35px;
+  cursor: pointer;
+  transition: all var(--tran-time);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: var(--white);
+  font-family: Overpass-Bold;
+  font-size: calc(var(--fs-p) * 1.1);
+  letter-spacing: 0.15rem;
+  text-decoration: none;
+}
+
+main > a:hover
+{
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+footer
+{
+  position: absolute;
+  bottom: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--fs-p);
+  color: var(--white);
+}
+
+footer a
+{
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 768px)
+{
+  main
+  {
+    width: 23.5rem;
+  }
+}
