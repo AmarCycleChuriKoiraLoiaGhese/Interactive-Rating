@@ -25,15 +25,14 @@ Users should be able to:
 
 ### Screenshot
 
-![Rating Page For Desktop](screenshots/rating-page-desktop.jpgscreenshot.jpg)
+![Rating Page For Desktop](screenshots/rating-page-desktop.jpg)
 ![Rating Page For Mobile](screenshots/rating-page-mobile.jpg)
 ![Thanks Page For Desktop](screenshots/Thanks-page-desktop.jpg)
 ![Thanks Page For Mobile](screenshots/thank-you-page-mobile.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Live Site On GitHub](https://amarcyclechurikoiraloiaghese.github.io/Interactive-Rating/)
 
 ### Built with
 
